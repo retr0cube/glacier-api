@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "glacier-api"
+version = "0.1.0"
+description = "A REST API for the 👾 Monolith project"
+authors = ["retr0cube <buthelo0@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "glacier_api"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Flask = "2.3"
+supabase = "^1.0.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
