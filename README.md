@@ -3,3 +3,6 @@
 </p>
 <h1 align="center">Glacier API</h1>
 <p align=center>A REST API for the 👾 Monolith project</p>
+
+<p align=center>
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/retr0cube/glacier-api?color=darkblue&style=for-the-badge"><img alt="GitHub" src="https://img.shields.io/github/license/retr0cube/glacier-api?color=blue&style=for-the-badge"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/retr0cube/glacier-api/python-app.yml?logo=GitHub&style=for-the-badge"></p>
