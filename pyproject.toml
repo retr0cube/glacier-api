@@ -5,13 +5,13 @@ description = "A REST API for the 👾 Monolith project"
 authors = ["retr0cube <buthelo0@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "glacier_api"}]
+packages = [{include = "glacier-api"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
 Flask = "2.3"
 supabase = "^1.0.3"
-gunicorn = "20.*"
+
 
 [build-system]
 requires = ["poetry-core"]

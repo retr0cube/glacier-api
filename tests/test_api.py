@@ -1,25 +1,34 @@
-import unittest
 import json
 
 from api import api
 
-class TestAPI(unittest.TestCase):
 
-    def setUp(self):
-        self.app = api.test_client()
-        self.app.testing = True
+def test_packages():
+    with api.test_client() as client:
+        # sending a request and then loading the JSON response
+        req = client.get("/packages/mnl")
+        data = json.loads(req.data)
 
-    def test_home(self):
-        response = self.app.get('/')
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.data, b'\xf0\x9f\x91\x80 Curiosity kills the \xf0\x9f\x90\xb1 cat!')
+        # comparing the response with the expected results
+        assert all(
+            [
+                req.status_code == 200,
+                data["name"] == "monolith",
+                data["authors"] == ["Retcy"],
+                data["slug_name"] == "mnl",
+                data["desc"] == "This is a test",
+            ]
+        )
 
-    def test_get_package(self):
-        response = self.app.get('/api/packages/mnl')
-        data = json.loads(response.data)
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(data['name'], 'monolith')
-        self.assertEqual(data['slug_name'], 'mnl')
 
-if __name__ == '__main__':
-    unittest.main()
+def test_home():
+    with api.test_client() as client:
+        req = client.get("/")
+
+        # sending a request to '/' and then comparing the response to the encoded string
+        assert all(
+            [
+                req.status_code == 200,
+                req.data == bytearray("👀 Curiosity kills the 🐱 cat!".encode()),
+            ]
+        )
