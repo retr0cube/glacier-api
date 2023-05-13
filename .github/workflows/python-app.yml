@@ -28,8 +28,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install pytest flask
         curl -sSL https://install.python-poetry.org | python3 -
-        poetry --version
-        export PATH=~/.local/share/pypoetry/venv/bin/poetry
+        export PATH=~/.local/share/pypoetry/venv/bin/poetry:$PATH
         poetry install
     - name: Test with pytest
       run: |
