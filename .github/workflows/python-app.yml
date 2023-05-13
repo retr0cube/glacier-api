@@ -26,10 +26,8 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pytest flask
-        curl -sSL https://install.python-poetry.org | python3 -
-        export PATH=~/.local/share/pypoetry/venv/bin/poetry:$PATH
+        pip install pytest poetry
         poetry install
     - name: Test with pytest
       run: |
-        python -m pytest
+        poetry run python -m pytest
