@@ -21,7 +21,7 @@ GET https://glacier-api.onrender.com/package/<name>
 {
 	"name": "Monolith",
 	"author": ["Retcy"]
-	
+	// other stuff here ;)
 }
 
 ```
