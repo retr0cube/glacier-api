@@ -14,7 +14,7 @@
 _**Example:**_
 - HTTP request:
 ```
-GET https://glacier-api.onrender.com/package/<name>
+GET https://glacier-api.onrender.com/package/mnl
 ```
 - JSON response:
 ```json
