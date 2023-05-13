@@ -3,9 +3,6 @@
 
 name: Python application
 
-env:
-  SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
-  SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
 on:
   push:
     branches: [ "main" ]
@@ -20,6 +17,9 @@ jobs:
 
     runs-on: ubuntu-latest
     environment: deploy_api
+    env:
+      SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.11
