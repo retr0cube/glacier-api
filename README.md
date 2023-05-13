@@ -9,9 +9,22 @@
 
 
 ## ℹ️ What is this?
-As mentioned in my [proof of concept](https://www.notion.so/monolith-retcy/feca0c394c4146429d7f7e0deee57e06?v=823fd92169e14adcbab697f69c98e32b&pvs=4), this is a REST API designed to house a database full of addons, and make it accessible via GET requests which return a JSON object, it’s the main addon repository for the 👾 Monolith project.
+As mentioned in my [proof of concept](https://www.notion.so/monolith-retcy/feca0c394c4146429d7f7e0deee57e06?v=823fd92169e14adcbab697f69c98e32b&pvs=4), this is a REST API designed to house a database full of addons, and make it accessible via GET requests which return a JSON object, it’s the main addon repository for the 👾 Monolith project hosted on glacier-api.onrender.com.
 
 _**Example:**_
+- HTTP request:
+```
+GET https://glacier-api.onrender.com/package/<name>
+```
+- JSON response:
+```json
+{
+	"name": <name>,
+	"author": <author>,
+	...
+}
+
+```
 
 **NOTE: can use this repository as a template for your own custom repo to use on the CLI.**
 
