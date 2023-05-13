@@ -14,15 +14,14 @@ permissions:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     environment: deploy_api
-    env:
-      SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
-      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.11
+      env:
+        SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+        SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
       uses: actions/setup-python@v3
       with:
         python-version: "3.11"
