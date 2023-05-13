@@ -26,5 +26,5 @@ GET https://glacier-api.onrender.com/package/<name>
 
 ```
 
-**NOTE: can use this repository as a template for your own custom repo to use on the CLI.**
+**NOTE: You can use this repository as a template for your own custom repo to use on the CLI.**
 
