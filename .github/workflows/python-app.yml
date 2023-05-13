@@ -3,6 +3,9 @@
 
 name: Python application
 
+env:
+  SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+  SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
 on:
   push:
     branches: [ "main" ]
